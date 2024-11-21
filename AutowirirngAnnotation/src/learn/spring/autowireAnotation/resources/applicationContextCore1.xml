@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- bean definitions here -->
+    
+    <bean class="learn.spring.autowireAnotation.Student" id="stu1" autowire="byName">
+        <property name="id" value="111"/>
+        <property name="name" value="SetterInjection Example"/>
+        <property name="age" value="25"/>
+ 
+    </bean>
+    
+    <!-- Injecting Address bean into Student-->
+    <bean class="learn.spring.autowireAnotation.Address" id="adr">
+        <property name="city" value="Kalyani"/>
+        <property name="state" value="WB"/>
+        <property name="hnum" value="101"/>
+    </bean>
+    
+     <bean class="learn.spring.autowireAnotation.Subject" id="sub">
+     	<property name="subject">
+     		<list>
+     			<value>Arts</value>
+     			<value>Vocals</value>
+     			<value>Music</value>
+     		</list>
+     	</property>
+        
+    </bean>
+    
+    
+    
+   
+    
+ 
+</beans>
